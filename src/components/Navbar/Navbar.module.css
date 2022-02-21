@@ -1,0 +1,30 @@
+nav {
+  padding-inline: 1.25rem;
+  padding-block: 0.8rem;  
+  background: hsl(var(--clr-neutral-light-theme-100, var(--clr-neutral-dark-theme-600)));
+  box-shadow: 1px 1px 5px hsl(0, 50%, 0%, 0.3);
+  border-radius: 0.4rem;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+  color: hsl(var(--clr-neutral-light-theme-400, var(--clr-neutral-dark-theme-400)));
+  list-style: none;
+
+}
+
+.list > li  button {
+  padding: 0;
+  color: currentColor;
+  border: 0;
+  background: transparent;
+}
+
+.list > li  button[aria-selected="true"] {
+  color: hsl(var(--clr-primary));
+}

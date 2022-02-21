@@ -1,0 +1,35 @@
+.form {
+  padding-inline: 1.25rem;
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: hsl(var(--clr-neutral-light-theme-100, var(--clr-neutral-dark-theme-600)));
+  box-shadow: 1px 1px 5px hsl(0, 50%, 0%, 0.3);
+  border-radius: 0.4rem;
+}
+
+.checkbox {
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1px solid hsl(var(--clr-neutral-light-theme-200, var(--clr-neutral-dark-theme-500)));
+}
+
+.input {
+  padding: 0;
+  flex-grow: 1;
+  font-size: 0.75rem;
+  color: hsl(var(--clr-neutral-light-theme-500, var(--clr-neutral-dark-theme-100)));
+  background: transparent;
+  border: 0;
+}
+
+.input::placeholder {
+  color: hsl(var(--clr-neutral-light-theme-500, var(--clr-neutral-dark-theme-300)));
+}
+
+.input:focus {
+  outline: none;
+}

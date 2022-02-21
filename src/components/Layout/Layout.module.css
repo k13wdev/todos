@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+  --clr-primary: 220, 98%, 61%;
+}
+
+[data-theme="light"] {
+  --clr-neutral-light-theme-100: 0, 0%, 98%;
+  --clr-neutral-light-theme-200: 236, 33%, 92%;
+  --clr-neutral-light-theme-300: 233, 11%, 84%;
+  --clr-neutral-light-theme-400: 236, 9%, 61%;
+  --clr-neutral-light-theme-500: 235, 19%, 35%;
+  --bg-light: url("../../assets/bg-mobile-light.jpg");
+}
+
+[data-theme="dark"] {
+  --clr-neutral-dark-theme-100: 234, 39%, 85%;
+  --clr-neutral-dark-theme-200: 236, 33%, 92%;
+  --clr-neutral-dark-theme-300: 234, 11%, 52%;
+  --clr-neutral-dark-theme-400: 233, 14%, 35%;
+  --clr-neutral-dark-theme-500: 237, 14%, 26%;
+  --clr-neutral-dark-theme-600: 235, 24%, 19%;
+  --clr-neutral-dark-theme-700: 235, 21%, 11%;
+
+  --bg-dark: url("../../assets/bg-mobile-dark.jpg");
+}
+/*-----------------------------------------*/
+/*                                         */
+/*              RESET STYLE                */
+/*                                         */
+/*-----------------------------------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-weight: 400;
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: flex;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.wrapper {
+  padding-inline: 1.5rem;
+  padding-block-start: 2.5rem;
+  padding-block-end: 4rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  background: var(--bg-light, var(--bg-dark)), hsl(var(--clr-neutral-light-theme-200, var(--clr-neutral-dark-theme-700)));
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  transition: all 0.4s ease-in;
+}
+
+.wrapper > p {
+  margin-block-start: 2.5rem;
+  font-size: 0.85rem;
+  color: hsl(var(--clr-neutral-light-theme-500, var(--clr-neutral-dark-theme-400)));
+  text-align: center;
+}
+
+main {
+  margin-block-start: 1.5rem;
+}
+
+main > * + * {
+  margin-block-start: 1rem;
+}
+ 
+
+@media (min-width: 768px) {
+  [data-theme="light"] .wrapper {
+    --bg-light: url("../../assets/bg-desktop-light.jpg");
+  }
+
+  [data-theme="dark"] .wrapper {
+    --bg-dark: url("../../assets/bg-desktop-dark.jpg");
+  }
+}

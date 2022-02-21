@@ -1,0 +1,89 @@
+.wrapper {
+  padding-inline: 1.25rem;
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+label > input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1px solid hsl(var(--clr-neutral-light-theme-200, var(--clr-neutral-dark-theme-500)));
+}
+
+input[type="checkbox"]:checked + .checkbox {
+  background: 
+    url("../../assets/icon-check.svg"),
+    linear-gradient(130deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
+}
+
+.checkbox::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+input:not(:checked) + .checkbox:hover {
+  border: 0;
+  background: linear-gradient(130deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+}
+
+input:not(:checked) + .checkbox:hover::after {
+  background: hsl(var(--clr-neutral-light-theme-100, var(--clr-neutral-dark-theme-600)));
+}
+
+.text {
+  flex-grow: 1;
+  font-size: 0.75rem;
+  color: hsl(var(--clr-neutral-light-theme-500, var(--clr-neutral-dark-theme-100)));
+}
+
+.text_cross {
+  position: relative; 
+  display: flex;
+  align-items: center;
+}
+
+.text_cross::after {
+  content: '123';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+}
+
+.button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border: 0;
+  background-color: transparent;
+}
